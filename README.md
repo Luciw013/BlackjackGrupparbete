@@ -8,8 +8,10 @@ Ser ni rubriker (rader som börjar med ¤-tecken) eller eventuella underliggande
 ¤ Topplista (inkl json-fil) <---------- Luci
   - inläsning + lagring av korrekta värden
 
-¤ Huvudmeny
+¤ Huvudmeny <-----------------Luci
   - metodanrop
+  - menyval
+  - inläsning av json-fil
 
 ¤ Kortlek
   - "kort-text"
