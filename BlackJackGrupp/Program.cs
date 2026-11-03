@@ -6,7 +6,7 @@
 
 int choice = int.Parse(Console.ReadLine());
 while (true)
-{ 
+{
     Console.WriteLine("=== Blackjack ===");
     Console.WriteLine("1. Spela");
     Console.WriteLine("2. Topplista");
@@ -17,7 +17,7 @@ while (true)
     Console.WriteLine($"Ditt namn: {Name}");
     Console.WriteLine($"Du har: -- kr");  // eventuellt ersätt -- med variabel för spelarens aktuella saldo. 
     Console.WriteLine($"Ange insats (1-maxbelopp kr)"); //ersätt "maxbelopp" med variabel för aktuellt saldo
-    
+
 
     if (choice == 1)
     {
@@ -59,4 +59,4 @@ while (true)
 
 
 
-Menu();
+}
