@@ -1,0 +1,53 @@
+[
+
+  {
+    {
+      "Runda": "", //inläst från variabel eller direkt angivet
+      "Namn": "", //inläst från spelar-inmatning ("profil")
+      "Slutsaldo": "" //inläst från slutsaldo
+    },
+
+    {
+      "Runda": "",
+      "Namn": "",
+      "Slutsaldo": ""
+    },
+
+    {
+      "Runda": "",
+      "Namn": "",
+      "Slutsaldo": ""
+    },
+
+    {
+      "Runda": "",
+      "Namn": "",
+      "Slutsaldo": ""
+    },
+
+    {
+      "Runda": "",
+      "Namn": "",
+      "Slutsaldo": ""
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  }
+
+]
+
