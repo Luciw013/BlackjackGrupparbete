@@ -7,6 +7,7 @@ Ser ni rubriker (rader som börjar med ¤-tecken) eller eventuella underliggande
 
 ¤ Topplista (inkl json-fil) <---------- Luci
   - inläsning + lagring av korrekta värden
+  - gör så tom json-fil läses in om värden saknas
 
 ¤ Huvudmeny <-----------------Luci
   - metodanrop
