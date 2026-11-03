@@ -6,7 +6,8 @@ Ser ni rubriker (rader som börjar med ¤-tecken) eller eventuella underliggande
 ----FEATURES----
 
 ¤ Topplista (inkl json-fil) <---------- Luci
-  - inläsning + lagring av korrekta värden
+  - inläsning + lagring av korrekta värden - klass med 1 objekt för varje spelrunda?
+  - gör så tom json-fil läses in om värden saknas
 
 ¤ Huvudmeny <-----------------Luci
   - metodanrop
@@ -27,5 +28,7 @@ Ser ni rubriker (rader som börjar med ¤-tecken) eller eventuella underliggande
   - visar spelarens saldo vid start + uppdaterat saldo vid rundans slut
   - inmatning av insats
   - 
-
+¤ Regler (innebär det att man ska kunna läsa spelregler?)
+  - infoga regeltext i textfil (en till json-fil??)
+    
 ¤ Hantering av felaktig användar-inmatning (punkt 4 på kravlista)
