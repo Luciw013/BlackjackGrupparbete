@@ -14,11 +14,11 @@ Ser ni rubriker (rader som börjar med ¤-tecken) eller eventuella underliggande
   - menyval
   - inläsning av json-fil
 
-¤ Kortlek
+¤ Kortlek <---------- Sam
   - "kort-text"
   - "poängvärde" för klädda kort + ess
 
-¤ Spelare 
+¤ Spelare <---------- Sam
   - startsaldo (100 kr)
 
 ¤ Dealer (?)

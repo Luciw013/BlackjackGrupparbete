@@ -58,4 +58,5 @@ while (true)
 
 
 
-}
+
+Menu();
