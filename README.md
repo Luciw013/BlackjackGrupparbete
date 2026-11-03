@@ -11,11 +11,11 @@ Ser ni rubriker (rader som börjar med ¤-tecken) eller eventuella underliggande
 ¤ Huvudmeny
   - metodanrop
 
-¤ Kortlek
+¤ Kortlek <---------- Sam
   - "kort-text"
   - "poängvärde" för klädda kort + ess
 
-¤ Spelare 
+¤ Spelare <---------- Sam
   - startsaldo (100 kr)
 
 ¤ Dealer (?)

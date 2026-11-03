@@ -12,4 +12,5 @@ void Menu()
     Console.WriteLine($"Ditt namn: {Name}");
 }
 
+
 Menu();
