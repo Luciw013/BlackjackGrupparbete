@@ -51,5 +51,14 @@ namespace BlackJackGrupp
         {
             return cards.Count;  
         }
+
+        public Card DrawCard()  
+        {
+            Card drawnCard = cards[0];
+            cards.RemoveAt(0);
+
+            return drawnCard;
+        }
+
     }
 }
