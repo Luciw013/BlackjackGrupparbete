@@ -68,6 +68,13 @@
                 Console.WriteLine("Du kan satsa som minst 1kr, som högst ditt saldo");
                 return false;
             }
+            else if(amount == Balance)
+            {
+                Balance -= amount;
+                Console.WriteLine($"Du har satsat ALLT du har: {amount} kr");
+                return true;
+            }
+
             Balance -= amount;
             Console.WriteLine($"Du har satsat: {amount} kr");
             return true;

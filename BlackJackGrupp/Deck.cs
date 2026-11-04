@@ -21,7 +21,7 @@ namespace BlackJackGrupp
 
             List<string> cardNames = new List<string>()
             {
-                "Ess", "Två", "Tre", "Fyra", "Fem","Sex", "Sju", "Åtta", "Nio", "Tio","Knekt", "Dam", "Kung"
+                "[Ess]", "[2]", "[3]", "[4]", "[5]","[6]", "[7]", "[8]", "[9]", "[10]","[Knekt]", "[Dam]", "[Kung]"
             };
 
 

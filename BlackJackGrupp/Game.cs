@@ -19,9 +19,9 @@ namespace BlackJackGrupp
 
             player.Balance = 100;
         }
-    
 
-    public void StartRound()
+
+        public void StartRound()
         {
             if (deck.CardsLeft() < 15)
             {
@@ -70,16 +70,15 @@ namespace BlackJackGrupp
 
             foreach (Card card in playerCards)
             {
-                Console.WriteLine($"{card.CardName} i {card.CardSymbol}");
+                Console.WriteLine($"{card.CardSymbol}  {card.CardName}");
             }
-
-            Console.WriteLine($"Poäng: {CalculateHandValue(playerCards)}");
+            Console.WriteLine($"Dina Poäng: {CalculateHandValue(playerCards)}");
         }
 
         public void ShowDealerCard()
         {
             Console.WriteLine("Dealerns uppvända kort:");
-            Console.WriteLine($"{dealerCards[0].CardName} i {dealerCards[0].CardSymbol}");
+            Console.WriteLine($"{dealerCards[0].CardSymbol} {dealerCards[0].CardName} ");
         }
 
         public void PlayerTurn()
@@ -88,8 +87,6 @@ namespace BlackJackGrupp
 
             while (keepPlaying && CalculateHandValue(playerCards) < 21)
             {
-                ShowPlayerCards();
-
                 Console.WriteLine("1. Hit");
                 Console.WriteLine("2. Stand");
 
@@ -116,6 +113,83 @@ namespace BlackJackGrupp
             while (CalculateHandValue(dealerCards) < 17)
             {
                 dealerCards.Add(deck.DrawCard());
+            }
+        }
+
+        public void PlayGame()
+        {
+            while (player.Balance >= 1)
+            {
+                Console.WriteLine($"Du har {player.Balance} kr.");
+                Console.Write("Ange insats: ");
+                
+                
+                decimal bet;
+
+                if (!decimal.TryParse(Console.ReadLine(), out bet) || !player.PlaceBet(bet))
+                {
+                    continue;
+                }
+
+                StartRound();
+
+                ShowDealerCard();
+                Console.WriteLine("[?]");
+
+                ShowPlayerCards();
+
+                PlayerTurn();
+
+                if (CalculateHandValue(playerCards) <= 21)
+                {
+                    DealerTurn();
+                }
+
+                Console.WriteLine("Dealerns kort:");
+
+                foreach (Card card in dealerCards)
+                {
+                    Console.WriteLine($"{card.CardName} {card.CardSymbol}");
+                }
+
+                int playerPoints = CalculateHandValue(playerCards);
+                int dealerPoints = CalculateHandValue(dealerCards);
+
+                if (playerPoints > 21 && player.Balance == 0)
+                {
+                    Console.WriteLine("Du är pank!");
+                    Console.WriteLine("GAME OVER");
+                }
+                else if(playerPoints > 21)
+                {
+                    Console.WriteLine("Du förlorade...");
+                }
+                else if (dealerPoints > 21 || playerPoints > dealerPoints)
+                {
+                    player.AddMoney(bet * 2);
+                    Console.WriteLine($"Du vann {bet} kr!");
+                }
+                else if (playerPoints == dealerPoints)
+                {
+                    player.AddMoney(bet);
+                    Console.WriteLine("Oavgjort!");
+                }
+                else
+                {
+                    Console.WriteLine("Dealern vann!");
+                    Console.WriteLine($"Dealerns Poäng: {CalculateHandValue(dealerCards)}");
+                }
+
+                player.RoundsPlayed++;
+
+                Console.WriteLine($"Ditt saldo: {player.Balance} kr");
+
+                Console.Write("Spela igen? (j/n): ");
+
+                if (Console.ReadLine()?.ToLower() != "j")
+                {
+                    break;
+                }
             }
         }
     }
