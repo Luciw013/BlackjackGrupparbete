@@ -29,7 +29,7 @@ Ser ni rubriker (rader som börjar med ¤-tecken) eller eventuella underliggande
   - visar spelarens saldo vid start + uppdaterat saldo vid rundans slut
   - inmatning av insats
   - 
-¤ Regler (innebär det att man ska kunna läsa spelregler?)
+¤ Regler (visa regeltext)
   - infoga regeltext i textfil (en till json-fil??)
     
 ¤ Hantering av felaktig användar-inmatning (punkt 4 på kravlista)
