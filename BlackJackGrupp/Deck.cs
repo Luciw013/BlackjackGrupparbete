@@ -1,4 +1,6 @@
-﻿
+﻿using System;
+using System.Linq;
+
 namespace BlackJackGrupp
 {
     public class Deck
@@ -7,6 +9,14 @@ namespace BlackJackGrupp
 
         public Deck()
         {
+            CreateDeck(); //varje nytt objekt startar med 52 kort
+        }
+
+        public void CreateDeck() // Skapar en ny kortlek med 52 kort när objektet skapas
+        {
+
+            cards.Clear(); //Nollställer kortleken så den kan shuffla 52 nya igen
+
             string[] cardSymbols = { "Hjärter", "Ruter", "Klöver", "Spader" };
 
             List<string> cardNames = new List<string>()
@@ -27,8 +37,19 @@ namespace BlackJackGrupp
                     Card newCard = new Card(symbol, cardNames[i], cardValues[i]); // skapar ett kort med färg, namn och värdet
 
                     cards.Add(newCard); //läggs till i listan
+
                 }
             }
+        }
+        public void ShuffleCards()
+        {
+            Random random = new Random();
+            cards = cards.OrderBy(card => random.Next()).ToList();  //sorterar korten efter ett slumpmässigt värde
+        }
+
+        public int CardsLeft()  //Visar hur många kort som finns kvar i kortleken
+        {
+            return cards.Count;  
         }
     }
 }
