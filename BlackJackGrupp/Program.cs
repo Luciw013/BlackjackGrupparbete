@@ -1,10 +1,10 @@
-﻿using System.ComponentModel.Design;
+﻿using BlackJackGrupp;
+using System.ComponentModel.Design;
 //using System.Text.Json;
 
 //string jsonFileToplist = File.ReadAllText("Toplist.json");
 //lista för Toplist resultat här
 
-int choice = int.Parse(Console.ReadLine());
 while (true)
 {
     Console.WriteLine("=== Blackjack ===");
@@ -12,16 +12,17 @@ while (true)
     Console.WriteLine("2. Topplista");
     Console.WriteLine("3. Regler");
     Console.WriteLine("4. Avsluta");
-    Console.WriteLine("Skriv in ditt namn: ");
-    string Name = Console.ReadLine();
-    Console.WriteLine($"Ditt namn: {Name}");
-    Console.WriteLine($"Du har: -- kr");  // eventuellt ersätt -- med variabel för spelarens aktuella saldo. 
-    Console.WriteLine($"Ange insats (1-maxbelopp kr)"); //ersätt "maxbelopp" med variabel för aktuellt saldo
+    Console.Write("Val: ");
 
+    int choice = int.Parse(Console.ReadLine());
 
     if (choice == 1)
     {
-        //metodanrop för spela
+        Console.Write("Skriv in ditt namn: ");
+        string name = Console.ReadLine();
+
+        Game game = new Game(name);
+        game.PlayGame();
     }
 
     else if (choice == 2)
