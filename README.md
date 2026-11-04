@@ -8,6 +8,7 @@ Ser ni rubriker (rader som börjar med ¤-tecken) eller eventuella underliggande
 ¤ Topplista (inkl json-fil) <---------- Luci
   - inläsning + lagring av korrekta värden - klass med 1 objekt för varje spelrunda?
   - gör så tom json-fil läses in om värden saknas
+  - skapa klass för toplist?
 
 ¤ Huvudmeny <-----------------Luci
   - metodanrop
