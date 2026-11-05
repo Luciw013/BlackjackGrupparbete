@@ -68,7 +68,7 @@ namespace BlackJackGrupp
         }
         public void DisplayToplist()        //metod för att visa topplista
         {
-            Console.WriteLine("\n===== TOPPLISTA =====");
+            Console.WriteLine("\n##### TOPPLISTA #####");
 
             if (results.Count == 0)
             {
@@ -85,7 +85,7 @@ namespace BlackJackGrupp
                 );
             }
 
-            Console.WriteLine("======================\n");
+            Console.WriteLine("#####################\n");
         }
     }
 }
