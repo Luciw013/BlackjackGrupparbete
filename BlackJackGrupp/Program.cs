@@ -1,9 +1,9 @@
 ﻿using BlackJackGrupp;
 using System.ComponentModel.Design;
-//using System.Text.Json;
+using System.Text.Json;
 
-//string jsonFileToplist = File.ReadAllText("Toplist.json");
-//lista för Toplist resultat här
+ToplistManager toplistManager = new ToplistManager();
+toplistManager.Load();
 
 while (true)
 {
@@ -23,20 +23,26 @@ while (true)
 
         Game game = new Game(name);
         game.PlayGame();
+
+        toplistManager.AddResult            //hämtar spelresultat + skickar till json-fil.
+        (
+            name,  
+            game.FinalBalance,
+            game.RoundsPlayed
+        );
+
     }
 
     else if (choice == 2)
     {
-        Console.WriteLine("---Topplista---");
-        //metodanrop visa topplista
-
+        toplistManager.DisplayToplist();
     }
 
     /*if (choice == 3)
     {
         Console.WriteLine("---fel kort---"); //metodanrop för regler*/
     else if (choice == 3)
-{
+    {
         Console.WriteLine("===== SPELREGLER BLACKJACK =====");
 
         Console.WriteLine();
@@ -77,7 +83,7 @@ while (true)
         Console.WriteLine();
         Console.WriteLine("Tryck på Enter för att återgå till menyn.");
         Console.ReadLine();
-}
+    }
     
 
     else if (choice == 4)
@@ -91,16 +97,6 @@ while (true)
         return;
     }
 
-    //infoga metod för spara json?? (se exempel ToDoApp)
-
-
-
-
-
-
-
-
-
-
+   
 
 }
