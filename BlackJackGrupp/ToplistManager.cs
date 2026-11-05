@@ -6,16 +6,16 @@ using System.Text.Json;
 namespace BlackJackGrupp
 {
 
-    public class ToplistManager            //hanterar Topplistan + json-filen
+    public class ToplistManager            //hanterar topplistan
     {
-        private readonly string filePath = "leaderboard.json";
-        private List<PlayerResult> results = new List<PlayerResult>();
+        private readonly string filePath = "Toplist.json";
+        private List<Highscore> results = new List<Highscore>();
 
-        public void Load()                  // läser in json-fil
+        public void Load()                  // läser in json-fil vid start av program
         {
             if (!File.Exists(filePath))
             {
-                results = new List<PlayerResult>();
+                results = new List<Highscore>();
                 Save();
                 return;
             }
@@ -26,17 +26,17 @@ namespace BlackJackGrupp
 
                 if (string.IsNullOrWhiteSpace(json))
                 {
-                    results = new List<PlayerResult>();
+                    results = new List<Highscore>();
                 }
                 else
                 {
-                    results = JsonSerializer.Deserialize<List<PlayerResult>>(json)
-                                ?? new List<PlayerResult>();
+                    results = JsonSerializer.Deserialize<List<Highscore>>(json)
+                                ?? new List<Highscore>();
                 }
             }
             catch (JsonException)
             {
-                results = new List<PlayerResult>();
+                results = new List<Highscore>();
             }
 
             Save();
@@ -76,11 +76,11 @@ namespace BlackJackGrupp
         // Visa topplistan
         public void ShowLeaderboard()
         {
-            Console.WriteLine("\n===== TOPPLISTAN =====");
+            Console.WriteLine("\n===== TOPPLISTA =====");
 
             if (results.Count == 0)
             {
-                Console.WriteLine("Det finns inga resultat ännu.");
+                Console.WriteLine(" ");
                 return;
             }
 
