@@ -36,7 +36,7 @@ while (true)
     {
         Console.WriteLine("---fel kort---"); //metodanrop för regler*/
     else if (choice == 3)
-{
+    {
         Console.WriteLine("===== SPELREGLER BLACKJACK =====");
 
         Console.WriteLine();
@@ -77,7 +77,7 @@ while (true)
         Console.WriteLine();
         Console.WriteLine("Tryck på Enter för att återgå till menyn.");
         Console.ReadLine();
-}
+    }
     
 
     else if (choice == 4)
