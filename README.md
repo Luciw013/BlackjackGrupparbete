@@ -4,17 +4,6 @@ När du börjar jobba på något, skriv ditt namn vid den punkten.
 Ser ni rubriker (rader som börjar med ¤-tecken) eller eventuella underliggande punkter som saknas/ligger fel - ändra gärna så vi inte oavsiktligt dubbeljobbar . /Luci)
 
 ----FEATURES----
-
-¤ Topplista (inkl json-fil) <---------- Luci
-  - inläsning + lagring av korrekta värden - klass med 1 objekt för varje spelrunda?
-  - gör så tom json-fil läses in om värden saknas
-  - skapa klass för toplist?
-
-¤ Huvudmeny <-----------------Luci
-  - metodanrop
-  - menyval
-  - inläsning av json-fil
-
 ¤ Kortlek <---------- Sam
   - "kort-text"
   - "poängvärde" för klädda kort + ess
@@ -26,6 +15,6 @@ Ser ni rubriker (rader som börjar med ¤-tecken) eller eventuella underliggande
   - inmatning av insats
   - 
 ¤ Regler (visa regeltext)
-  - infoga regeltext i textfil (en till json-fil??)
+  - infoga regeltext i textfil 
     
 ¤ Hantering av felaktig användar-inmatning (punkt 4 på kravlista)
