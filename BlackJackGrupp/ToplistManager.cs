@@ -42,9 +42,9 @@ namespace BlackJackGrupp
             Save();
         }
 
-        public void AddResult(string name, decimal balance, int rounds)     // Sparar nytt resultat
+        public void AddResult(string name, decimal balance, int rounds)     // Sparar + sorterar resultat
         {
-            PlayerResult newResult = new PlayerResult
+            Highscore newResult = new Highscore
             {
                 Name = name,
                 FinalBalance = balance,
@@ -52,29 +52,21 @@ namespace BlackJackGrupp
             };
 
             results.Add(newResult);
-
-            // Soreterar 
             results = results
                 .OrderByDescending(r => r.FinalBalance)
-                .Take(5)
+                .Take(5)        //tar endast med de 5 hittills bästa resultaten
                 .ToList();
 
             Save();
         }
-
-        // Spara topplistan till JSON
-        private void Save()
+        private void Save()             // Lagrar i json-fil
         {
-            string json = JsonSerializer.Serialize(
-                results,
-                new JsonSerializerOptions { WriteIndented = true }
-            );
-
+           string json = JsonSerializer.Serialize(results, new JsonSerializerOptions
+           { WriteIndented = true });
+               
             File.WriteAllText(filePath, json);
         }
-
-        // Visa topplistan
-        public void ShowLeaderboard()
+        public void DisplayToplist()        //metod för att visa topplista
         {
             Console.WriteLine("\n===== TOPPLISTA =====");
 

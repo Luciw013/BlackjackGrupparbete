@@ -91,7 +91,7 @@ while (true)
         return;
     }
 
-    //infoga metod för spara json?? (se exempel ToDoApp)
+   
 
 
 
