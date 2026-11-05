@@ -19,12 +19,8 @@ Ser ni rubriker (rader som börjar med ¤-tecken) eller eventuella underliggande
   - "kort-text"
   - "poängvärde" för klädda kort + ess
 
-¤ Spelare <---------- Sam
-  - startsaldo (100 kr)
-
-¤ Dealer (?)
-
-¤ Spelrunda (se punkt 3 på kravlista)
+¤ Game  + spelare (Sam)
+  - Dealer
   - ett sätt att kunna dra kort
   - visar spelarens saldo vid start + uppdaterat saldo vid rundans slut
   - inmatning av insats
