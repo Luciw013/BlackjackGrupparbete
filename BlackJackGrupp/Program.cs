@@ -2,8 +2,8 @@
 using System.ComponentModel.Design;
 using System.Text.Json;
 
-//string jsonFileToplist = File.ReadAllText("Toplist.json");
-//lista för Toplist resultat här
+ToplistManager toplistManager = new ToplistManager();
+toplistManager.Load();
 
 while (true)
 {
@@ -27,9 +27,7 @@ while (true)
 
     else if (choice == 2)
     {
-        Console.WriteLine("---Topplista---");
-        //metodanrop visa topplista
-
+        toplistManager.DisplayToplist();
     }
 
     /*if (choice == 3)

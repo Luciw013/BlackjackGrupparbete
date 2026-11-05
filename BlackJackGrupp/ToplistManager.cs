@@ -8,7 +8,7 @@ namespace BlackJackGrupp
 
     public class ToplistManager            //hanterar topplistan
     {
-        private readonly string filePath = "Toplist.json";
+        private string filePath = "Toplist.json";
         private List<Highscore> results = new List<Highscore>();
 
         public void Load()                  // läser in json-fil vid start av program

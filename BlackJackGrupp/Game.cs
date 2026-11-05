@@ -9,6 +9,9 @@ namespace BlackJackGrupp
         private Player player;
         private List<Card> playerCards = new();
         private List<Card> dealerCards = new();
+        public decimal FinalBalance => player.Balance;      //hämtar aktuellt spelar-saldo
+        public int RoundsPlayed => player.RoundsPlayed;     //hämtar antal spelade rundor. (pil istället för get{return...}
+
 
         public Game(string name)
         {
