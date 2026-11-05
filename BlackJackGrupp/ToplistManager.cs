@@ -72,7 +72,7 @@ namespace BlackJackGrupp
 
             if (results.Count == 0)
             {
-                Console.WriteLine(" ");
+                Console.WriteLine("Inga sparade resultat än.");
                 return;
             }
 

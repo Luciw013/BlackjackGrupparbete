@@ -23,6 +23,14 @@ while (true)
 
         Game game = new Game(name);
         game.PlayGame();
+
+        toplistManager.AddResult            //hämtar spelresultat + skickar till json-fil.
+        (
+            name,  
+            game.FinalBalance,
+            game.RoundsPlayed
+        );
+
     }
 
     else if (choice == 2)
